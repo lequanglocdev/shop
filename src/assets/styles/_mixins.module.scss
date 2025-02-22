@@ -1,0 +1,10 @@
+@mixin radius_common ($radius:10px){
+  border-radius: $radius;
+}
+
+@mixin icon_size ($w,$h,$color){
+  width: $w;
+  height: $h;
+  color: $color;
+}
+
