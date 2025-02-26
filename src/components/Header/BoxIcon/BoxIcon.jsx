@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import styles from "./styles.module.scss";
+import styles from "../styles.module.scss";
 import fbIcon from "../../../assets/icons/iconFb.svg";
 import IgIcon from "../../../assets/icons/iconIg.svg";
 import YtbIcon from "../../../assets/icons/iconYtb.svg";

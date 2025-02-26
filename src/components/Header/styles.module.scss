@@ -1,13 +1,85 @@
 @import '@styles/mixins.module.scss';
+@import '@styles/variables.module.scss';
 
-.containerHeader{
-  display: flex;
+.container{
+  @include flex_box_custom(center, center, 20px);
+  background-color: $bg_color;
 }
 
-.headerIcon{
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+.headerWrapper{
+  width: 1250px;
+  @include flex_box_custom(space-between, center, 0);
+
+}
+
+.headerLeft{
+    @include flex_box_custom(center, center, 20px);
+    height: 83px;
+    .headerIcon {
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+
+    .headerNav{
+        @include flex_box_custom(center, center, 20px);
+      }
+}
+
+.headerRight{
+  @include flex_box_custom(center, center, 20px);
+
+  .headerRightText {
+    @include flex_box_custom(center, center, 20px);
+    &:hover {
+        cursor: pointer;
+      }
+  }
+
+  .headerRightIcon{
+    @include flex_box_custom(center, center, 20px);
+    &:hover {
+        cursor: pointer;
+      }
+  }
+}
+
+.boxIcon {
+  @include radius_common(50%);
+  @include flex_box_custom(center, center, 0px);
+
+  background-color: $primary_color;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.menuText{
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 400;
+  color: $primary_color ;
+  padding-top: 9px;
+  font-size: 15px;
+}
+
+.menu::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: $primary_color;
+  margin-top: 6px;
+
+  transform-origin: left;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 300ms, opacity 500ms;
+}
+
+.menu:hover::after {
+  opacity: 1;
+  transform: scale(1);
 }
